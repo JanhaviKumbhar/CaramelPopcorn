@@ -1,55 +1,39 @@
-import { useEffect } from "react";
-import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import '@/App.css';
+import { StoreProvider } from '@/store/useStore';
+import AppLayout from '@/components/AppLayout';
+import DashboardPage from '@/pages/DashboardPage';
+import WishlistPage from '@/pages/WishlistPage';
+import InspirationPage from '@/pages/InspirationPage';
+import LooksPage from '@/pages/LooksPage';
+import CategoriesPage from '@/pages/CategoriesPage';
+import CollectionsPage from '@/pages/CollectionsPage';
+import ComparePage from '@/pages/ComparePage';
+import RemindersPage from '@/pages/RemindersPage';
+import InsightsPage from '@/pages/InsightsPage';
+import SettingsPage from '@/pages/SettingsPage';
 
 function App() {
   return (
-    <div className="App">
+    <StoreProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
+          <Route element={<AppLayout />}>
+            <Route path="/"            element={<DashboardPage />} />
+            <Route path="/wishlist"    element={<WishlistPage />} />
+            <Route path="/inspiration" element={<InspirationPage />} />
+            <Route path="/looks"       element={<LooksPage />} />
+            <Route path="/categories"  element={<CategoriesPage />} />
+            <Route path="/collections" element={<CollectionsPage />} />
+            <Route path="/compare"     element={<ComparePage />} />
+            <Route path="/reminders"   element={<RemindersPage />} />
+            <Route path="/insights"    element={<InsightsPage />} />
+            <Route path="/settings"    element={<SettingsPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
+    </StoreProvider>
   );
 }
 

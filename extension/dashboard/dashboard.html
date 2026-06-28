@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caramel Popcorn — Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <aside class="cp-side" data-testid="ext-dash-sidebar">
+    <div class="cp-side-brand">
+      <div class="badge">🍿</div>
+      <div><div class="b1">Caramel</div><div class="b2">Popcorn</div></div>
+    </div>
+    <nav id="nav">
+      <button class="nav-item active" data-view="all">🏠 All saves</button>
+      <button class="nav-item" data-view="wishlist">❤️ Wishlist</button>
+      <button class="nav-item" data-view="inspiration">✨ Inspiration</button>
+      <button class="nav-item" data-view="looks">👗 Looks</button>
+      <button class="nav-item" data-view="favorites">⭐ Favorites</button>
+      <button class="nav-item" data-view="collections">📁 Collections</button>
+    </nav>
+    <div class="side-tip">
+      <strong>Pro tip</strong>
+      <p>Right-click any image or link to save it instantly.</p>
+    </div>
+  </aside>
+
+  <main class="cp-main">
+    <header class="cp-top">
+      <input id="q" placeholder="Search products, brands, looks…" data-testid="ext-dash-search"/>
+      <button id="refresh" class="btn-sec" data-testid="ext-dash-refresh">↻ Refresh</button>
+    </header>
+
+    <section id="hero" class="hero">
+      <h1>Everything you've loved, <em>in one cozy place.</em></h1>
+      <p>Caramel Popcorn auto-categorises every save, decodes outfits, and surfaces patterns you didn't know you had.</p>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section id="grid-wrap">
+      <h2 id="view-title">Recently saved</h2>
+      <div id="grid" class="grid" data-testid="ext-dash-grid"></div>
+      <div id="empty" class="empty hidden">
+        <div class="emoji">🍿</div>
+        <h3>Your wishlist is waiting for its first crush.</h3>
+        <p>Visit Nykaa, Pinterest, Instagram or any supported store and tap the floating 🍿 button.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

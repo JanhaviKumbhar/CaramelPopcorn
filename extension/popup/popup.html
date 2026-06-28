@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=380, initial-scale=1" />
+  <title>Caramel Popcorn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="cp-popup" data-testid="extension-popup">
+    <header class="cp-pop-header">
+      <div class="cp-brand">
+        <div class="cp-brand-badge">🍿</div>
+        <div>
+          <div class="cp-brand-name">Caramel</div>
+          <div class="cp-brand-name italic">Popcorn</div>
+        </div>
+      </div>
+      <button id="open-dashboard" class="cp-link" data-testid="popup-open-dashboard">Open dashboard ↗</button>
+    </header>
+
+    <section class="cp-pop-current" id="current-card" data-testid="popup-current-card"></section>
+
+    <div class="cp-pop-search">
+      <input id="search" placeholder="Search saved finds…" data-testid="popup-search-input"/>
+    </div>
+
+    <section class="cp-pop-section">
+      <div class="cp-pop-section-title">Recently saved</div>
+      <div id="recent" class="cp-recent" data-testid="popup-recent-list"></div>
+    </section>
+
+    <section class="cp-pop-section">
+      <div class="cp-pop-section-title">Quick collections</div>
+      <div id="collections" class="cp-collections" data-testid="popup-collections-list"></div>
+    </section>
+
+    <footer class="cp-pop-footer">
+      <button id="save-current" class="cp-btn-primary" data-testid="popup-save-current">🍿 Save current page</button>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
