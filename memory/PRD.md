@@ -59,6 +59,12 @@ Build "Caramel Popcorn" — an AI-powered Chrome Extension (Manifest V3) that be
 - Downloadable zip wired to `/caramel-popcorn-extension.zip` from Settings + Topbar + Dashboard hero.
 - Tested end-to-end by testing agent: **100% pass on all 11 feature flows, 0 console errors**.
 
+## Iteration 2 — 2026-06-28 — "Share this Look" (no backend)
+- New `/share/look#data=<base64>` public read-only route that decodes outfit data directly from the URL hash — no server needed, privacy-friendly.
+- `ShareLookButton` component renders on every look card with native Web Share API + clipboard fallback + WhatsApp/Twitter/Email quick-share chips.
+- `SharedLookPage` renders a beautiful read-only outfit page: image, title, aesthetic + occasion, dominant palette, decoded items, "Save to my looks" CTA, install-extension CTA, invalid-state handling.
+- Testing agent iteration 2: **100% pass on all 11 share-flow tests, 0 console errors**.
+
 ## Prioritized Backlog
 ### P0 (none — MVP complete)
 
