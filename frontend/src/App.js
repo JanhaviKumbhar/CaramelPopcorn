@@ -13,12 +13,17 @@ import ComparePage from '@/pages/ComparePage';
 import RemindersPage from '@/pages/RemindersPage';
 import InsightsPage from '@/pages/InsightsPage';
 import SettingsPage from '@/pages/SettingsPage';
+import SharedLookPage from '@/pages/SharedLookPage';
 
 function App() {
   return (
     <StoreProvider>
       <BrowserRouter>
         <Routes>
+          {/* Public read-only share page (no sidebar / chrome) */}
+          <Route path="/share/look" element={<SharedLookPage />} />
+
+          {/* App shell */}
           <Route element={<AppLayout />}>
             <Route path="/"            element={<DashboardPage />} />
             <Route path="/wishlist"    element={<WishlistPage />} />

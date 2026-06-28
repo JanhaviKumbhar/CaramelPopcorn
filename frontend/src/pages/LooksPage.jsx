@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStore } from '@/store/useStore';
+import ShareLookButton from '@/components/ShareLookButton';
 
 export default function LooksPage() {
   const { items } = useStore();
@@ -59,6 +60,10 @@ export default function LooksPage() {
                   </div>
 
                   {l.notes && <p className="mt-4 text-sm italic" style={{ color:'#5C4033' }}>“{l.notes}”</p>}
+
+                  <div className="mt-5">
+                    <ShareLookButton look={l} />
+                  </div>
                 </div>
               </div>
             </article>
