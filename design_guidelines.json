@@ -1,0 +1,136 @@
+{
+  "theme": "Light",
+  "archetype": "Organic & Earthy + Luxury Blend",
+  "design_philosophy": "Premium feminine aesthetic. Inspired by Apple, Pinterest, Notion, Glossier, Rhode, Rare Beauty. Clean, minimalist, deeply warm and inviting. Focus on high-quality typography, generous white space, smooth rounded corners, and soft glassmorphism.",
+  "colors": {
+    "background": {
+      "main": "#FCFAF8",
+      "extension": "#FCFAF8"
+    },
+    "surface": {
+      "card": "#FFFFFF",
+      "glass": "rgba(255, 255, 255, 0.75)",
+      "glass_border": "rgba(0, 0, 0, 0.05)"
+    },
+    "primary": {
+      "main": "#C47C47",
+      "hover": "#B36B36",
+      "light": "#F4E3D7"
+    },
+    "secondary": {
+      "main": "#8C6239",
+      "light": "#E8DFD8"
+    },
+    "text": {
+      "primary": "#2B1E16",
+      "secondary": "#5C4033",
+      "muted": "#99857A"
+    },
+    "save_types": {
+      "cant_stop_thinking": {"bg": "#FCEAEA", "text": "#B33F40", "emoji": "❤️"},
+      "fomo": {"bg": "#FDF3E1", "text": "#B8860B", "emoji": "🍿"},
+      "manifesting": {"bg": "#F2EAFD", "text": "#6A4C93", "emoji": "✨"},
+      "just_browsing": {"bg": "#F0F0F0", "text": "#595959", "emoji": "🤷"}
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Playfair Display, serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl font-heading font-medium tracking-tight text-[#2B1E16]",
+      "h2": "text-2xl sm:text-3xl font-heading font-medium tracking-tight text-[#2B1E16]",
+      "h3": "text-xl sm:text-2xl font-heading font-medium tracking-tight text-[#2B1E16]",
+      "h4": "text-lg sm:text-xl font-body font-semibold tracking-tight text-[#2B1E16]",
+      "body": "text-base font-body leading-relaxed text-[#5C4033]",
+      "small": "text-sm font-body text-[#99857A]"
+    }
+  },
+  "layout": {
+    "extension_popup": {
+      "dimensions": "w-[380px] h-[560px]",
+      "structure": "Fixed glass header, scrollable main content with generous padding (p-4 to p-6), sticky bottom action bar. No horizontal scrolling."
+    },
+    "dashboard": {
+      "sidebar": "w-64 fixed left-0 top-0 h-screen bg-[#FCFAF8] border-r border-[#E8DFD8] p-6",
+      "main_content": "ml-64 p-8 sm:p-12 min-h-screen bg-[#FCFAF8]",
+      "grids": {
+        "dashboard_widgets": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+        "masonry_inspiration": "columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6"
+      }
+    },
+    "spacing": "Generous. Use p-6 or p-8 for cards. gap-6 for grids. Optical alignment prioritized over rigid geometric grids."
+  },
+  "components": {
+    "cards": "bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#E8DFD8]/50 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)]",
+    "glass_header": "backdrop-blur-xl bg-white/70 border-b border-white/20 sticky top-0 z-50",
+    "chips": "rounded-full px-4 py-1.5 text-sm font-medium transition-colors cursor-pointer flex items-center gap-2",
+    "buttons": {
+      "primary": "bg-[#C47C47] text-white rounded-full px-6 py-2.5 font-semibold transition-all hover:bg-[#B36B36] active:scale-95 shadow-sm",
+      "secondary": "bg-white border border-[#E8DFD8] text-[#5C4033] rounded-full px-6 py-2.5 font-semibold transition-all hover:bg-[#FCFAF8] active:scale-95"
+    },
+    "looks_outfit_card": "Includes itemized breakdown (top, bottom, footwear, bag) with color swatches and aesthetic tags. Uses a subtle 'bento' internal layout."
+  },
+  "micro_animations": {
+    "hover_states": "Soft scaling (hover:-translate-y-1) and shadow deepening for cards. Opacity fades (opacity-80 to opacity-100) for links.",
+    "page_transitions": "Subtle fade-in and slide-up (translate-y-4 to translate-y-0) staggered for list items and grids.",
+    "button_press": "Scale down (active:scale-95) for tactile feedback."
+  },
+  "empty_states": {
+    "style": "Minimalist single-color line art or abstract soft blobs (SVG) matching the palette (Cream/Caramel). Friendly, encouraging copy. Always include a primary CTA.",
+    "examples": {
+      "wishlist": "Illustration of a hanger or empty shopping bag with text 'Your wishlist is waiting for its first crush.'",
+      "inspiration": "Illustration of an empty moodboard frame."
+    }
+  },
+  "accessibility_and_testing": {
+    "contrast": "Text must meet WCAG AA standards. Ensure hover states maintain readability.",
+    "data_testid": "ALL interactive elements must have a data-testid attribute in kebab-case representing their role (e.g., data-testid='save-button', data-testid='category-filter-chip')."
+  },
+  "media_and_assets": {
+    "icon_library": "@phosphor-icons/react (Duotone or Light weight for elegant feel)",
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1667266543254-505cf5b16ec4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwyfHxtYWtldXAlMjBza2luY2FyZSUyMG1pbmltYWxpc3R8ZW58MHx8fHwxNzgyMjQ3NzcxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Minimalist skincare bottles with warm light",
+        "category": "inspiration_board_skincare"
+      },
+      {
+        "url": "https://images.pexels.com/photos/1470165/pexels-photo-1470165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Sophisticated flatlay of makeup brush and jar on pastel background",
+        "category": "inspiration_board_makeup"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1618244972963-dbee1a7edc95",
+        "description": "Woman in brown coat, minimalist aesthetic outfit",
+        "category": "inspiration_board_fashion"
+      },
+      {
+        "url": "https://images.pexels.com/photos/7202800/pexels-photo-7202800.jpeg",
+        "description": "Three stylish women in blazers",
+        "category": "collections_cover_office_wear"
+      },
+      {
+        "url": "https://images.pexels.com/photos/9218397/pexels-photo-9218397.jpeg",
+        "description": "Stylish clothing rack",
+        "category": "dashboard_widget_recent"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6",
+        "description": "Brown leather handbag on white surface",
+        "category": "inspiration_board_accessories"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Ensure the application strictly follows the Caramel Popcorn aesthetic: warm creamy tones, soft rounded borders (rounded-3xl for major cards), and minimal dropshadows.",
+    "The extension popup must have fixed dimensions w-[380px] h-[560px] in its wrapper and look like a native premium iOS widget.",
+    "Dashboard must utilize the 'Bento grid' pattern for the overview, and 'Masonry' for the Inspiration board.",
+    "DO NOT use generic sans-serif fonts (like Inter) for headings. Explicitly integrate and use 'Playfair Display' via Google Fonts.",
+    "Always use the provided image URLs for placeholders and dummy data. Never use via.placeholder.com or similar services.",
+    "Implement save types accurately with their designated background colors, text colors, and emojis.",
+    "Include 'data-testid' on all interactive elements without fail."
+  ]
+}
